@@ -26,14 +26,18 @@ $db = [
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <?php 
-    foreach ($db as $key) {
-        echo $db['title'];
+    foreach ($db as $key => $value) {
+        echo $value; 
         
-        foreach ($key as $items => $item) {
-            echo $item . "<br>";
-        }     
+        foreach ($value as $items => $item) {
+            echo $item; 
+
+        }
     }
+
+
     ?>
 </body>
 </html>
