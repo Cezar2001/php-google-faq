@@ -32,14 +32,14 @@ $db = [
             "<ol>
                 <li>
                     La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                    <ol>
+                    <ul class = 'lista-alfabetica'>
                         <li> 
                             Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                         </li>
                         <li> 
                             Google LLC, con sede negli Stati Uniti, per il resto del mondo.
                         </li>
-                    </ol>
+                    </ul>
                 </li>
 
                 <li>
@@ -91,16 +91,21 @@ $db = [
 </head>
 <body>
 
-    <?php 
-    foreach ($db as $key) {
-        echo '<' . $key['titleSize'] . '/>' . $key['title'] . '</'. $key['titleSize'] . '>';
+    <main>
+        <div class="container">
 
-        foreach ($key['paragraphs'] as $item => $value) {
-            echo $value . "<br>"; 
-        }
-    }
+            <?php 
+                foreach ($db as $key) {
+                    $size = $key['titleSize'];
+                    echo "<$size>{$key['title']}</$size>";
+                    
+                    foreach ($key['paragraphs'] as $item => $value) {
+                        echo "<p>" . $value . "</p>"; 
+                    }
+                }
+            ?>
 
-
-    ?>
+        </div>
+    </main>
 </body>
 </html>

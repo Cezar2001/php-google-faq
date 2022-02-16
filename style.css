@@ -3,3 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 900px;
+}
+
+h2, h3{
+    margin: 25px 0;
+}
+
+p{
+    margin: 10px 0;
+    color: #555555;
+}
+
+ol{
+    margin-left: 15px;
+}
+
+.lista-alfabetica{
+    list-style-type: lower-alpha;
+    margin-left: 35px;
+}
+
+.lista-alfabetica > li{
+    margin: 10px;
+}
+
+a{
+    color: #007FFF;
+    text-decoration: none;
+}
